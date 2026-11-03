@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="La Taberna de Moe - Distribuidora académica de bebidas. Sitio de ejemplo sin ventas reales.">
+  <title>La Taberna de Moe | Distribuidora de bebidas</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+  <!-- Bootstrap 5 (CSS) e iconos vía CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <!-- Estilos propios (después de Bootstrap para poder sobrescribir) -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-offset="90" tabindex="0">
+
+  <!-- Enlace de accesibilidad para saltar al contenido -->
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Franja de aviso legal: venta exclusiva para mayores de edad -->
+  <div class="aviso-legal text-center py-1">
+    <i class="bi bi-exclamation-octagon-fill me-1" aria-hidden="true"></i>
+    Venta exclusiva para mayores de 18 años. El exceso de alcohol es perjudicial para la salud (Ley 124 de 1994).
+    <span class="d-none d-md-inline">· Sitio académico: no se procesan pagos ni ventas reales.</span>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navPrincipal" class="navbar navbar-expand-lg navbar-light sticky-top navbar-taberna" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/logo-128.png" alt="" width="44" height="44" class="logo-nav">
+        <span class="marca">La Taberna de Moe</span>
+      </a>
+
+      <!-- Botón del carrito visible también en móvil -->
+      <button class="btn btn-borde position-relative ms-auto me-2 order-lg-last" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito"
+              aria-label="Abrir carrito">
+        <i class="bi bi-cart3" aria-hidden="true"></i>
+        <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+      </button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto me-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Alerta global (confirmación de pedido) -->
+  <div id="alertaGlobal" class="container position-fixed start-50 translate-middle-x alerta-global" aria-live="polite"></div>
+
+  <main id="contenido">
+
+    <!-- ============ 1. INICIO (carrusel) ============ -->
+    <section id="inicio" aria-label="Inicio">
+      <div id="carruselInicio" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+          <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-7 order-2 order-lg-1">
+                  <p class="eyebrow mb-3">Licores a domicilio · Bogotá</p>
+                  <h1 class="hero-titulo mb-3">La Taberna<br>de Moe</h1>
+                  <p class="hero-texto mb-4">Cervezas, aguardiente, ron, whisky y vinos de las marcas que conoces, con entrega a domicilio.</p>
+                  <a href="#catalogo" class="btn btn-tinta btn-lg px-4 me-2 mb-2">Ver catálogo</a>
+                  <a href="#promociones" class="btn btn-borde btn-lg px-4 mb-2">Promociones</a>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2 text-center">
+                  <img src="img/logo.webp" alt="Logo de La Taberna de Moe" class="hero-logo" width="420" height="420">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6 order-2 order-lg-1">
+                  <p class="eyebrow mb-3">Oferta destacada</p>
+                  <h2 class="hero-titulo mb-3">Old Parr 12 Años<br>con 20% menos</h2>
+                  <p class="hero-texto mb-4">De $144.200 a $115.360 mientras dure la promoción.</p>
+                  <button class="btn btn-tinta btn-lg px-4" data-ver-producto="15">Ver producto</button>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img src="img/promo-oldparr.webp" alt="Botella de whisky Old Parr 12 años sobre un círculo naranja" class="hero-promo" width="900" height="603" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6 order-2 order-lg-1">
+                  <p class="eyebrow mb-3">Solo este mes</p>
+                  <h2 class="hero-titulo mb-3">10% extra con<br><span class="cupon">MOE10</span></h2>
+                  <p class="hero-texto mb-4">Y envío gratis en pedidos desde $150.000.</p>
+                  <a href="#promociones" class="btn btn-tinta btn-lg px-4">Ver ofertas</a>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img src="img/promo-descuento.webp" alt="Cupón de descuento junto a una botella de cerveza y una de licor" class="hero-promo" width="900" height="601" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselInicio" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselInicio" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <!-- Beneficios: grid de 4 columnas que pasa a 2 y luego a 1 -->
+      <div class="container py-5 border-top">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <i class="bi bi-truck beneficio-icono" aria-hidden="true"></i>
+            <h3 class="h6 mt-2">Domicilio en Bogotá</h3>
+            <p class="small text-secondary mb-0">Gratis desde $150.000</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-shield-check beneficio-icono" aria-hidden="true"></i>
+            <h3 class="h6 mt-2">Productos sellados</h3>
+            <p class="small text-secondary mb-0">Garantía de origen</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-person-badge beneficio-icono" aria-hidden="true"></i>
+            <h3 class="h6 mt-2">Solo +18</h3>
+            <p class="small text-secondary mb-0">Verificamos la edad al entregar</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-chat-dots beneficio-icono" aria-hidden="true"></i>
+            <h3 class="h6 mt-2">Atención directa</h3>
+            <p class="small text-secondary mb-0">Lun a sáb 8 a. m. – 10 p. m.<br>Dom 11 a. m. – 3 a. m.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. CATÁLOGO ============ -->
+    <section id="catalogo" class="py-5 seccion-alt" aria-labelledby="tituloCatalogo">
+      <div class="container">
+        <div class="mb-4">
+          <h2 id="tituloCatalogo" class="titulo-seccion">Catálogo</h2>
+          <p class="text-secondary">Filtra por categoría, busca por nombre u ordena por precio.</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="card panel mb-4">
+          <div class="card-body">
+            <div class="row g-3 align-items-end">
+              <div class="col-12">
+                <div class="d-flex flex-wrap gap-2" id="filtrosCategoria" role="group" aria-label="Filtrar por categoría">
+                  <!-- Los botones de categoría se generan con JavaScript -->
+                </div>
+              </div>
+              <div class="col-12 col-md-5">
+                <label for="buscador" class="form-label small">Buscar</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-search" aria-hidden="true"></i></span>
+                  <input type="search" id="buscador" class="form-control" placeholder="Ej.: aguardiente, Old Parr, Club Colombia…">
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <label for="orden" class="form-label small">Ordenar por</label>
+                <select id="orden" class="form-select">
+                  <option value="relevancia">Destacados</option>
+                  <option value="precio-asc">Precio: menor a mayor</option>
+                  <option value="precio-desc">Precio: mayor a menor</option>
+                  <option value="nombre">Nombre (A-Z)</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-4">
+                <label for="precioMax" class="form-label small">Precio máximo: <strong id="precioMaxTexto">$210.000</strong></label>
+                <input type="range" class="form-range" id="precioMax" min="20000" max="210000" step="5000" value="210000">
+              </div>
+              <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="form-check form-switch mb-0">
+                  <input class="form-check-input" type="checkbox" role="switch" id="soloPromos">
+                  <label class="form-check-label" for="soloPromos">Solo productos en promoción</label>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="small text-secondary" id="contadorResultados" aria-live="polite"></span>
+                  <button class="btn btn-sm btn-borde" id="limpiarFiltros"><i class="bi bi-x-circle" aria-hidden="true"></i> Limpiar filtros</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rejilla de productos: 1 col (móvil) · 2 (sm) · 3 (lg) · 4 (xl) -->
+        <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-3 g-md-4" id="gridProductos"></div>
+
+        <div id="sinResultados" class="alert alert-warning d-none mt-4" role="alert">
+          <i class="bi bi-emoji-frown me-1" aria-hidden="true"></i>
+          No hay productos con esos filtros. Prueba con otra categoría o sube el precio máximo.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. PROMOCIONES ============ -->
+    <section id="promociones" class="py-5" aria-labelledby="tituloPromos">
+      <div class="container">
+        <div class="row align-items-center g-4 mb-4">
+          <div class="col-md-6 text-center text-md-start">
+            <div>
+          <h2 id="tituloPromos" class="titulo-seccion">Promociones</h2>
+          <p class="text-secondary mb-1">Las ofertas terminan en:</p>
+          <div class="cuenta-regresiva d-inline-flex gap-2" id="cuentaRegresiva" aria-live="off">
+            <div><span id="cdDias">00</span><small>días</small></div>
+            <div><span id="cdHoras">00</span><small>horas</small></div>
+            <div><span id="cdMin">00</span><small>min</small></div>
+            <div><span id="cdSeg">00</span><small>seg</small></div>
+          </div>
+        </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="img/promo-descuento.webp" alt="" class="img-promos" width="900" height="601" loading="lazy">
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-md-4">
+            <div class="card promo-card h-100">
+              <div class="card-body">
+                <p class="small text-secondary mb-1">Cupón</p>
+                <h3 class="h4 promo-codigo">MOE10</h3>
+                <p class="mb-0">10% de descuento adicional sobre el subtotal del carrito.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card promo-card h-100">
+              <div class="card-body">
+                <p class="small text-secondary mb-1">Cupón</p>
+                <h3 class="h4 promo-codigo">ENVIOGRATIS</h3>
+                <p class="mb-0">Envío gratis en cualquier pedido, sin monto mínimo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card promo-card h-100">
+              <div class="card-body">
+                <p class="small text-secondary mb-1">Ofertas</p>
+                <h3 class="h4">Precios rebajados</h3>
+                <p class="mb-0">Descuentos reales de tiendas en productos marcados con etiqueta roja.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h5 mb-3">Productos en oferta</h3>
+        <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4" id="gridPromos"></div>
+      </div>
+    </section>
+
+    <!-- ============ 4. NOSOTROS ============ -->
+    <section id="nosotros" class="py-5 seccion-alt" aria-labelledby="tituloNosotros">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-6">
+            <img src="img/logo.webp" alt="Logo de La Taberna de Moe: un gato barman brindando con una jarra de cerveza" class="logo-nosotros mb-4" width="160" height="160" loading="lazy">
+            <h2 id="tituloNosotros" class="titulo-seccion">Nosotros</h2>
+            <p>La Taberna de Moe nació como la cantina del barrio: barra de madera, luces de neón y los mismos clientes de siempre. Hoy funcionamos también como <strong>distribuidora</strong> y llevamos nuestras bebidas a domicilio.</p>
+            <p>Trabajamos con las marcas que más se venden en Colombia: aguardiente, ron, whisky, cerveza, vino y más.</p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-check2-circle text-acento me-2" aria-hidden="true"></i>Consumo responsable: no vendemos a menores de edad.</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-acento me-2" aria-hidden="true"></i>Pedidos todos los días: lunes a sábado de 8 a. m. a 10 p. m. y domingos de 11 a. m. a 3 a. m.</li>
+              <li><i class="bi bi-check2-circle text-acento me-2" aria-hidden="true"></i>Pago contra entrega.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <!-- Acordeón de preguntas frecuentes -->
+            <h3 class="h5 mb-3">Preguntas frecuentes</h3>
+            <div class="accordion" id="faq">
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">¿Cuánto tarda un domicilio?</button>
+                </h4>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                  <div class="accordion-body">Entre 45 y 90 minutos dentro de Bogotá, según la zona.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">¿Cómo verifican la edad?</button>
+                </h4>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">El sitio pide la fecha de nacimiento al ingresar y el repartidor solicita el documento de identidad al entregar.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">¿Puedo usar dos cupones?</button>
+                </h4>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">No. Se aplica un cupón por pedido; el último que ingreses reemplaza al anterior.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. CONTACTO ============ -->
+    <section id="contacto" class="py-5" aria-labelledby="tituloContacto">
+      <div class="container">
+        <h2 id="tituloContacto" class="titulo-seccion mb-4">Contacto</h2>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card panel h-100">
+              <div class="card-body">
+                <h3 class="h5">La barra te escucha</h3>
+                <p class="mb-2"><i class="bi bi-geo-alt text-acento me-2" aria-hidden="true"></i>Cra. 3 #22-50, Bogotá</p>
+                <p class="mb-2"><i class="bi bi-telephone text-acento me-2" aria-hidden="true"></i>(601) 555 0123</p>
+                <p class="mb-2"><i class="bi bi-envelope text-acento me-2" aria-hidden="true"></i>pedidos@tabernamoebogota.com</p>
+                <p class="mb-1"><i class="bi bi-clock text-acento me-2" aria-hidden="true"></i>Lunes a sábado: 8:00 a. m. – 10:00 p. m.</p>
+                <p class="mb-0 ps-4">Domingos: 11:00 a. m. – 3:00 a. m.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div id="alertaContacto" aria-live="polite"></div>
+            <form id="formContacto" class="card panel needs-validation" novalidate>
+              <div class="card-body row g-3">
+                <div class="col-md-6">
+                  <label for="cNombre" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="cNombre" required minlength="3" autocomplete="name">
+                  <div class="invalid-feedback">Escribe tu nombre (mínimo 3 letras).</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cCorreo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="cCorreo" required autocomplete="email">
+                  <div class="invalid-feedback">Escribe un correo válido.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cTelefono" class="form-label">Celular</label>
+                  <input type="tel" class="form-control" id="cTelefono" required pattern="3[0-9]{9}" placeholder="3001234567" autocomplete="tel">
+                  <div class="invalid-feedback">Debe tener 10 dígitos y empezar por 3.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cAsunto" class="form-label">Asunto</label>
+                  <select id="cAsunto" class="form-select" required>
+                    <option value="">Selecciona…</option>
+                    <option>Pedido al por mayor</option>
+                    <option>Eventos y fiestas</option>
+                    <option>Estado de mi pedido</option>
+                    <option>Otro</option>
+                  </select>
+                  <div class="invalid-feedback">Elige un asunto.</div>
+                </div>
+                <div class="col-12">
+                  <label for="cMensaje" class="form-label">Mensaje</label>
+                  <textarea id="cMensaje" class="form-control" rows="4" required minlength="10" maxlength="300"></textarea>
+                  <div class="invalid-feedback">Escribe al menos 10 caracteres.</div>
+                  <small class="text-secondary d-block text-end" id="contadorMensaje">0/300</small>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cMayor" required>
+                    <label class="form-check-label" for="cMayor">Confirmo que soy mayor de 18 años y acepto el tratamiento de datos.</label>
+                    <div class="invalid-feedback">Debes confirmar para enviar.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-tinta"><i class="bi bi-send me-1" aria-hidden="true"></i>Enviar mensaje</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer-taberna py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <img src="img/logo-128.png" alt="" width="48" height="48" class="me-2 rounded-3 align-middle"><span class="marca align-middle">La Taberna de Moe</span>
+          <p class="small mb-0 text-secondary">Cra. 3 #22-50, Bogotá · Lun a sáb 8 a. m. – 10 p. m. · Dom 11 a. m. – 3 a. m.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small text-secondary">
+          Prohíbase el expendio de bebidas embriagantes a menores de edad (Ley 124 de 1994).
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="btnArriba" class="btn btn-tinta rounded-circle" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- ============ OFFCANVAS: CARRITO ============ -->
+  <div class="offcanvas offcanvas-end offcanvas-taberna" tabindex="-1" id="carrito" aria-labelledby="tituloCarrito">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5" id="tituloCarrito"><i class="bi bi-cart3 me-2" aria-hidden="true"></i>Tu pedido</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="carritoVacio" class="text-center text-secondary my-5">
+        <i class="bi bi-cup-straw display-4" aria-hidden="true"></i>
+        <p class="mt-2">Tu carrito está vacío.<br>¡La barra te espera!</p>
+      </div>
+      <ul id="listaCarrito" class="list-unstyled mb-3"></ul>
+
+      <div id="resumenCarrito" class="mt-auto d-none">
+        <form id="formCupon" class="input-group input-group-sm mb-2">
+          <input type="text" id="inputCupon" class="form-control" placeholder="Cupón (MOE10, ENVIOGRATIS)" aria-label="Código de cupón">
+          <button class="btn btn-borde" type="submit">Aplicar</button>
+        </form>
+        <div id="mensajeCupon" class="small mb-2" aria-live="polite"></div>
+        <dl class="row small mb-2 resumen">
+          <dt class="col-7 fw-normal">Subtotal</dt><dd class="col-5 text-end mb-1" id="rSubtotal">$0</dd>
+          <dt class="col-7 fw-normal">Descuento cupón</dt><dd class="col-5 text-end mb-1 text-success" id="rDescuento">-$0</dd>
+          <dt class="col-7 fw-normal">Envío</dt><dd class="col-5 text-end mb-1" id="rEnvio">$0</dd>
+          <dt class="col-7 fw-normal text-secondary">IVA incluido (19%)</dt><dd class="col-5 text-end mb-1 text-secondary" id="rIva">$0</dd>
+          <dt class="col-7 fs-5">Total</dt><dd class="col-5 text-end fs-5 text-acento fw-bold mb-0" id="rTotal">$0</dd>
+        </dl>
+        <p class="small text-secondary" id="faltaEnvio"></p>
+        <div class="d-grid gap-2">
+          <button class="btn btn-tinta" id="btnFinalizar"><i class="bi bi-bag-check me-1" aria-hidden="true"></i>Finalizar pedido</button>
+          <button class="btn btn-outline-danger btn-sm" id="btnVaciar"><i class="bi bi-trash me-1" aria-hidden="true"></i>Vaciar carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL: VERIFICACIÓN DE EDAD ============ -->
+  <div class="modal fade" id="modalEdad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="tituloEdad" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-taberna text-center">
+        <div class="modal-body p-4">
+          <img src="img/logo-128.png" alt="Logo de La Taberna de Moe" width="110" height="110" class="mb-3 rounded-4">
+          <h2 class="h4" id="tituloEdad">¿Eres mayor de edad?</h2>
+          <p class="text-secondary">Este sitio contiene información sobre bebidas alcohólicas. Ingresa tu fecha de nacimiento para continuar.</p>
+          <form id="formEdad" novalidate>
+            <label for="fechaNacimiento" class="visually-hidden">Fecha de nacimiento</label>
+            <input type="date" id="fechaNacimiento" class="form-control form-control-lg mb-3" required>
+            <div id="alertaEdad" aria-live="assertive"></div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-tinta btn-lg">Entrar a la taberna</button>
+            </div>
+          </form>
+          <p class="small text-secondary mt-3 mb-0">Sitio académico: no se realizan ventas reales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL: DETALLE DE PRODUCTO ============ -->
+  <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="tituloProducto" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content modal-taberna">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloProducto">Producto</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5"><img id="mpImagen" src="" alt="" class="img-fluid rounded"></div>
+            <div class="col-md-7">
+              <span id="mpCategoria" class="badge text-bg-light border mb-2"></span>
+              <p id="mpDescripcion"></p>
+              <ul class="list-unstyled small" id="mpFicha"></ul>
+              <div id="mpPrecio" class="fs-3 mb-3"></div>
+              <div class="d-flex align-items-center gap-2">
+                <label for="mpCantidad" class="form-label mb-0">Cantidad</label>
+                <input type="number" id="mpCantidad" class="form-control" style="max-width:90px" min="1" value="1">
+                <button class="btn btn-tinta" id="mpAgregar"><i class="bi bi-cart-plus me-1" aria-hidden="true"></i>Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL: FINALIZAR PEDIDO (simulado) ============ -->
+  <div class="modal fade" id="modalPedido" tabindex="-1" aria-labelledby="tituloPedido" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-taberna">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloPedido">Datos de entrega</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <form id="formPedido" class="needs-validation" novalidate>
+          <div class="modal-body row g-3">
+            <div class="col-12">
+              <label for="pNombre" class="form-label">Nombre de quien recibe</label>
+              <input type="text" id="pNombre" class="form-control" required minlength="3">
+              <div class="invalid-feedback">Campo obligatorio.</div>
+            </div>
+            <div class="col-12">
+              <label for="pDireccion" class="form-label">Dirección</label>
+              <input type="text" id="pDireccion" class="form-control" required minlength="6" placeholder="Cra 00 # 00-00">
+              <div class="invalid-feedback">Escribe una dirección válida.</div>
+            </div>
+            <div class="col-6">
+              <label for="pTelefono" class="form-label">Celular</label>
+              <input type="tel" id="pTelefono" class="form-control" required pattern="3[0-9]{9}">
+              <div class="invalid-feedback">10 dígitos, empieza por 3.</div>
+            </div>
+            <div class="col-6">
+              <label for="pPago" class="form-label">Pago</label>
+              <select id="pPago" class="form-select" required>
+                <option value="">Elige…</option>
+                <option>Efectivo contra entrega</option>
+                <option>Datáfono contra entrega</option>
+              </select>
+              <div class="invalid-feedback">Elige un método.</div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pMayor" required>
+                <label class="form-check-label" for="pMayor">Quien recibe es mayor de edad y mostrará su documento.</label>
+                <div class="invalid-feedback">Obligatorio para entregar bebidas alcohólicas.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="alert alert-light border small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i>Total a pagar: <strong id="pTotal">$0</strong>. Pedido simulado, no se cobrará nada.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Seguir comprando</button>
+            <button type="submit" class="btn btn-tinta">Confirmar pedido</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor de toasts (avisos rápidos) -->
+  <div class="toast-container position-fixed bottom-0 start-0 p-3" id="contenedorToasts"></div>
+
+  <!-- Bootstrap JS (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica propia -->
+  <script src="js/productos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
