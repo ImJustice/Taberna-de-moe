@@ -1,0 +1,188 @@
+/* ---------- 1. Variables de identidad visual ---------- */
+:root {
+  /* Paleta tomada del logo */
+  --tinta: #110d09;          /* negro del contorno del logo */
+  --gris: #6b5a45;           /* texto secundario (marrón cálido) */
+  --linea: #ead2a8;          /* bordes */
+  --fondo: #fdebd0;          /* crema del fondo del logo */
+  --blanco: #fff8ec;         /* paneles y tarjetas */
+  --acento: #ed9715;         /* naranja/ámbar del logo */
+  --acento-hover: #d9850a;
+  --acento-texto: #9a5800;   /* naranja oscuro para texto pequeño (mejor contraste) */
+  --oferta: #b42318;
+
+  /* Sobrescribimos variables de Bootstrap */
+  --bs-body-bg: var(--fondo);
+  --bs-body-color: var(--tinta);
+  --bs-body-font-family: "Inter", system-ui, -apple-system, sans-serif;
+  --bs-secondary-color: var(--gris);
+  --bs-border-color: var(--linea);
+  --bs-border-radius: .75rem;
+  --bs-link-color-rgb: 17, 13, 9;
+  --bs-link-hover-color-rgb: 154, 88, 0;
+}
+
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 72px; }
+body { font-size: .975rem; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; letter-spacing: -.02em; }
+.text-secondary { color: var(--gris) !important; }
+.text-acento { color: var(--acento-texto) !important; }
+
+.skip-link {
+  position: absolute; top: .5rem; left: .5rem; z-index: 2000;
+  background: var(--tinta); color: #fff; padding: .5rem 1rem; border-radius: .5rem;
+}
+
+/* ---------- 2. Aviso legal y navbar ---------- */
+.aviso-legal { background: var(--tinta); color: var(--fondo); font-size: .78rem; letter-spacing: .01em; }
+
+.navbar-taberna {
+  background: rgba(253, 235, 208, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--linea);
+}
+.marca { font-weight: 800; letter-spacing: -.03em; font-size: 1.1rem; color: var(--tinta); }
+.logo-nav { border-radius: .7rem; border: 2px solid var(--tinta); }
+.navbar-taberna .nav-link { font-size: .9rem; color: var(--gris); }
+.navbar-taberna .nav-link.active,
+.navbar-taberna .nav-link:hover { color: var(--tinta); }
+.navbar-taberna .nav-link.active { font-weight: 600; }
+
+/* ---------- 3. Botones ---------- */
+.btn { border-radius: 50rem; font-weight: 500; }
+.btn-tinta {
+  --bs-btn-bg: var(--tinta); --bs-btn-border-color: var(--tinta); --bs-btn-color: var(--fondo);
+  --bs-btn-hover-bg: var(--acento); --bs-btn-hover-border-color: var(--tinta); --bs-btn-hover-color: var(--tinta);
+  --bs-btn-active-bg: var(--acento-hover); --bs-btn-active-color: var(--tinta); --bs-btn-focus-shadow-rgb: 237, 151, 21;
+}
+.btn-borde {
+  --bs-btn-color: var(--tinta); --bs-btn-border-color: var(--linea);
+  --bs-btn-hover-bg: var(--blanco); --bs-btn-hover-border-color: var(--tinta); --bs-btn-hover-color: var(--tinta);
+  --bs-btn-active-bg: var(--blanco);
+  background: var(--blanco);
+}
+.btn-link { --bs-btn-color: var(--gris); --bs-btn-hover-color: var(--tinta); text-decoration: none; }
+
+/* ---------- 4. Carrusel (hero) ---------- */
+#carruselInicio .carousel-item { min-height: 62vh; padding: 5rem 0; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; color: var(--acento-texto); font-weight: 700; }
+.hero-titulo { font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -.045em; line-height: 1.02; }
+.hero-texto { color: var(--gris); font-size: 1.1rem; max-width: 34rem; }
+.cupon { background: var(--acento); padding: 0 .3em; border-radius: .3em; }
+.hero-logo { width: min(100%, 380px); height: auto; border-radius: 2rem; }
+@media (max-width: 991.98px) { .hero-logo { width: 220px; } }
+.hero-promo { width: 100%; max-width: 560px; height: auto; }
+@media (max-width: 991.98px) { .hero-promo { max-width: 340px; } }
+.img-promos { width: 100%; max-width: 440px; height: auto; }
+.carousel-indicators [data-bs-target] { background-color: var(--tinta); width: 24px; height: 2px; }
+.carousel-control-prev, .carousel-control-next { width: 6%; }
+.carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(1); width: 1.4rem; }
+
+.beneficio-icono { font-size: 1.4rem; color: var(--tinta); }
+
+/* ---------- 5. Secciones ---------- */
+.seccion-alt { background: var(--blanco); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+.titulo-seccion { font-size: clamp(1.75rem, 3.5vw, 2.4rem); font-weight: 800; letter-spacing: -.035em; }
+
+.panel {
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: 1rem;
+}
+.form-control, .form-select { border-color: var(--linea); border-radius: .6rem; }
+.input-group-text { background: var(--blanco); border-color: var(--linea); color: var(--gris); }
+.form-control, .form-select { background-color: #fffdf8; }
+.form-control:focus, .form-select:focus { border-color: var(--acento); box-shadow: 0 0 0 .2rem rgba(237,151,21,.25); }
+.form-check-input:checked { background-color: var(--tinta); border-color: var(--tinta); }
+.form-range::-webkit-slider-thumb { background: var(--tinta); }
+.form-range::-moz-range-thumb { background: var(--tinta); }
+.form-label { font-size: .8rem; color: var(--gris); font-weight: 500; }
+
+/* Filtros de categoría tipo "chip" */
+.btn-categoria {
+  --bs-btn-padding-y: .3rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .85rem;
+  --bs-btn-color: var(--gris); --bs-btn-border-color: var(--linea);
+  --bs-btn-hover-color: var(--tinta); --bs-btn-hover-border-color: var(--tinta);
+  background: var(--blanco);
+}
+.btn-categoria.active { background: var(--tinta); color: var(--fondo); border-color: var(--tinta); }
+
+/* ---------- 6. Tarjetas de producto ---------- */
+.card-producto {
+  background: transparent; border: 0; border-radius: 1rem;
+}
+.card-producto .img-wrap {
+  border-radius: 1rem; overflow: hidden; border: 1px solid var(--linea);
+  position: relative; cursor: pointer; background: #fff;
+}
+.card-producto .card-img-top { aspect-ratio: 1 / 1; object-fit: contain; padding: 1rem; background: #fff; transition: transform .4s ease; border-radius: 0; }
+.card-producto:hover .card-img-top { transform: scale(1.03); }
+.card-producto .card-body { padding: .9rem .1rem .4rem; }
+.card-producto .card-title { font-size: .98rem; font-weight: 600; margin-bottom: .15rem; }
+.marca-producto { font-size: .75rem; color: var(--gris); text-transform: uppercase; letter-spacing: .06em; }
+.precio { font-weight: 600; font-size: 1.05rem; }
+.precio-antes { text-decoration: line-through; color: var(--gris); font-size: .85rem; }
+.badge-promo { background: var(--acento); color: var(--tinta); position: absolute; top: .7rem; left: .7rem; font-weight: 700; z-index: 1; }
+.btn-agregar {
+  position: absolute; right: .7rem; bottom: .7rem; width: 40px; height: 40px; padding: 0;
+  border-radius: 50%; display: grid; place-items: center;
+  opacity: 0; transform: translateY(6px); transition: all .2s ease;
+}
+.card-producto:hover .btn-agregar, .btn-agregar:focus-visible { opacity: 1; transform: none; }
+@media (hover: none) { .btn-agregar { opacity: 1; transform: none; } } /* táctil: siempre visible */
+.aparecer { animation: aparecer .3s ease both; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- 7. Promociones ---------- */
+.promo-card { background: var(--blanco); border: 1px solid var(--linea); border-radius: 1rem; }
+.promo-codigo { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; letter-spacing: .05em; }
+.cuenta-regresiva div { min-width: 56px; text-align: center; }
+.cuenta-regresiva span { display: block; font-size: 1.8rem; font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.cuenta-regresiva small { color: var(--gris); font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; }
+
+/* ---------- 8. Acordeón ---------- */
+.accordion {
+  --bs-accordion-bg: transparent; --bs-accordion-border-color: var(--linea);
+  --bs-accordion-active-bg: transparent; --bs-accordion-active-color: var(--tinta);
+  --bs-accordion-btn-focus-box-shadow: none; --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+}
+.accordion-item { border-left: 0; border-right: 0; }
+.accordion-button { font-weight: 500; padding-left: 0; padding-right: 0; }
+.accordion-body { padding-left: 0; color: var(--gris); }
+
+/* ---------- 9. Carrito (offcanvas) y modales ---------- */
+.offcanvas-taberna, .modal-taberna { background: var(--blanco); border-color: var(--linea); }
+.modal-taberna { border-radius: 1.2rem; }
+.item-carrito { border-bottom: 1px solid var(--linea); padding: .9rem 0; }
+.item-carrito img { width: 56px; height: 56px; border-radius: .6rem; object-fit: contain; background: #fff; border: 1px solid var(--linea); }
+#mpImagen { background: #fff; object-fit: contain; aspect-ratio: 1/1; width: 100%; padding: 1rem; border: 1px solid var(--linea); }
+.logo-nosotros { border-radius: 1.5rem; border: 2px solid var(--tinta); }
+.btn-cantidad { --bs-btn-padding-y: 0; --bs-btn-padding-x: .55rem; --bs-btn-font-size: .9rem; }
+.cantidad-item { min-width: 24px; text-align: center; display: inline-block; font-variant-numeric: tabular-nums; }
+.resumen dt, .resumen dd { margin-bottom: .25rem; }
+.toast { border-radius: .75rem; }
+
+/* ---------- 10. Footer y botón arriba ---------- */
+.footer-taberna { border-top: 1px solid var(--linea); }
+#btnArriba {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; width: 44px; height: 44px; padding: 0;
+  opacity: 0; pointer-events: none; transition: opacity .3s; z-index: 1030;
+}
+#btnArriba.visible { opacity: 1; pointer-events: auto; }
+.alerta-global { top: 84px; z-index: 1085; max-width: 600px; }
+
+/* ---------- 11. Responsive y accesibilidad ---------- */
+@media (max-width: 575.98px) {
+  #carruselInicio .carousel-item { min-height: 0; padding: 2.5rem 0 4rem; }
+  .carousel-control-prev, .carousel-control-next { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .aparecer, .card-producto .card-img-top { animation: none; transition: none; }
+}
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+
+/* Bloqueo del sitio si el usuario no es mayor de edad */
+body.bloqueado main, body.bloqueado footer { filter: blur(10px); pointer-events: none; user-select: none; }
