@@ -1,0 +1,240 @@
+[
+  {
+    "slug": "club-colombia-dorada",
+    "archivo": "img/productos/club-colombia-dorada.png",
+    "dislicores": "cerveza-club-colombia-lata-x6-370302",
+    "busqueda": "Club Colombia Dorada",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/370302-CERVEZA-CLUB-COL-LTA-SIXPACK-330CC.png"
+  },
+  {
+    "slug": "club-colombia-roja",
+    "archivo": "img/productos/club-colombia-roja.png",
+    "dislicores": "cerveza-club-colombia-roja-lata-x6-370304",
+    "busqueda": "Club Colombia Roja",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/370304-CERVEZA_CLUB_COLOMBIA_ROJA_LATA_X6_330ML.png"
+  },
+  {
+    "slug": "aguila",
+    "archivo": "img/productos/aguila.png",
+    "dislicores": "cerveza-aguila-lata-x6-370517",
+    "busqueda": "Águila Original",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/370517-CERVEZA_AGUILA_LATA_330CCX6.png"
+  },
+  {
+    "slug": "poker",
+    "archivo": "img/productos/poker.png",
+    "dislicores": "cerveza-poker-lata-six-pack-370518",
+    "busqueda": "Poker",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/370518-poker-latax6-330.png"
+  },
+  {
+    "slug": "antioqueno-rojo",
+    "archivo": "img/productos/antioqueno-rojo.png",
+    "dislicores": "aguardiente-antioqueno-220031",
+    "busqueda": "Aguardiente Antioqueño Tapa Roja",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/220031-AGTE-ANT-TRADICIONAL-BOT-750--1---1.png"
+  },
+  {
+    "slug": "antioqueno-azul",
+    "archivo": "img/productos/antioqueno-azul.png",
+    "dislicores": "aguardiente-antioqueno-sin-azucar-220013",
+    "busqueda": "Aguardiente Antioqueño Tapa Azul",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/220013-Aguardiente-Sin-Azucar-750ml_69fbc4f3-a073-4e70-9965-762694814ee4.png"
+  },
+  {
+    "slug": "amarillo-manzanares",
+    "archivo": "img/productos/amarillo-manzanares.png",
+    "dislicores": "aguardiente-amarillo-sin-azucar-222099",
+    "busqueda": "Aguardiente Amarillo de Manzanares Sin Azúcar",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/222099-aguardianteamarillo-750ml-1_png.png"
+  },
+  {
+    "slug": "antioqueno-verde",
+    "archivo": "img/productos/antioqueno-verde.png",
+    "dislicores": "aguardiente-antioqueno-verde-220008",
+    "busqueda": "Aguardiente Antioqueño Verde",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/AGUARDIEMTE_ANTIOQUENO_VERDE_BOTELLA_750ML_220008.png"
+  },
+  {
+    "slug": "viejo-de-caldas",
+    "archivo": "img/productos/viejo-de-caldas.png",
+    "dislicores": "ron-viejo-de-caldas-tradicional-2-222000",
+    "busqueda": "Ron Viejo de Caldas Tradicional",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/222000-RON-VIEJO-DE-CALDAS-BOT-X-750ML.png"
+  },
+  {
+    "slug": "viejo-de-caldas-8",
+    "archivo": "img/productos/viejo-de-caldas-8.png",
+    "dislicores": "ron-gran-reserva-8-anos-carta-de-oro-222093",
+    "busqueda": "Ron Viejo de Caldas Carta de Oro 8 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/bbd27637b1256c85cc82e6e0392b2755_53e29bcb-97c1-447d-bf49-b425d8a41363_638103051442565912.png"
+  },
+  {
+    "slug": "juan-de-la-cruz",
+    "archivo": "img/productos/juan-de-la-cruz.png",
+    "dislicores": "ron-viejo-de-caldas-extraviejo-5-anos-222005",
+    "busqueda": "Ron Viejo de Caldas Juan de la Cruz 5 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/222005-RON-VIEJO-DE-CALDAS-5-ANIOS-750ML.png"
+  },
+  {
+    "slug": "ron-medellin-3",
+    "archivo": "img/productos/ron-medellin-3.png",
+    "dislicores": "ron-medellin-anejo-3-anos-2-220076",
+    "busqueda": "Ron Medellín Añejo 3 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/220076-RON-MED-3-ANOS-BOT-750--1.png"
+  },
+  {
+    "slug": "ron-medellin-8",
+    "archivo": "img/productos/ron-medellin-8.png",
+    "dislicores": "ron-medellin-8-anos-2-220056",
+    "busqueda": "Ron Medellín Extra Añejo 8 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/220056-RON-MED-8-ANOS-BOT-750--1.png"
+  },
+  {
+    "slug": "bacardi-carta-blanca",
+    "archivo": "img/productos/bacardi-carta-blanca.png",
+    "dislicores": "ron-bacardi-carta-blanca-superior-2-960074",
+    "busqueda": "Ron Bacardí Carta Blanca Superior",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/311588-1200-auto.png"
+  },
+  {
+    "slug": "old-parr",
+    "archivo": "img/productos/old-parr.png",
+    "dislicores": "whisky-old-parr-12-anos-blended-2-002015",
+    "busqueda": "Old Parr 12 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/2015-OLD-PARR-AGED-12-YEARS-750L.png"
+  },
+  {
+    "slug": "buchanans",
+    "archivo": "img/productos/buchanans.png",
+    "dislicores": "whisky-buchanans-deluxe-blended-12-anos-escoces-002237",
+    "busqueda": "Buchanan's Deluxe 12 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/2237-BUCHANANS-DELUXE-AGED-12-YEARS-750L.png"
+  },
+  {
+    "slug": "johnnie-walker-black",
+    "archivo": "img/productos/johnnie-walker-black.png",
+    "dislicores": "whisky-johnnie-walker-black-label-blended-2-002340",
+    "busqueda": "Johnnie Walker Black Label 12 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/2340-JW-BLACK-LABEL-0.7L_1.png"
+  },
+  {
+    "slug": "johnnie-walker-red",
+    "archivo": "img/productos/johnnie-walker-red.png",
+    "dislicores": "whisky-johnnie-walker-red-label-blended-escoces-002346",
+    "busqueda": "Johnnie Walker Red Label",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/002346-JOHNNIE_WALKER_RED_LABEL_BOTELLA_700ML.png"
+  },
+  {
+    "slug": "glenlivet-12",
+    "archivo": "img/productos/glenlivet-12.png",
+    "dislicores": "whisky-glenlivet-12-anos-304037",
+    "busqueda": "The Glenlivet 12 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/304037-Whisky-Glenlivet-12-700ml.png"
+  },
+  {
+    "slug": "jack-daniels",
+    "archivo": "img/productos/jack-daniels.png",
+    "dislicores": "whisky-jack-daniels-2-960044",
+    "busqueda": "Jack Daniel's Old No. 7",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/960044-JACK-DANIELS-700.png"
+  },
+  {
+    "slug": "black-white",
+    "archivo": "img/productos/black-white.png",
+    "dislicores": "whisky-black-and-white-blended-2-002331",
+    "busqueda": "Black & White 8 Años",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/002331-BLACK-_-WHITE-BLENDED-WHISKY-700ml.png"
+  },
+  {
+    "slug": "gato-negro",
+    "archivo": "img/productos/gato-negro.png",
+    "dislicores": "vino-tinto-gato-negro-varietal-cabernet-merlot-100111",
+    "busqueda": "Gato Negro Cabernet Merlot",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/100111-VINO_TINTO_GATO_NEGRO_CABERNET_MERLOT.png"
+  },
+  {
+    "slug": "la-celia-cabernet",
+    "archivo": "img/productos/la-celia-cabernet.png",
+    "dislicores": "vino-tinto-la-celia-cabernet-sauvignon-reserva-109113",
+    "busqueda": "La Celia Reserva Cabernet Sauvignon",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/109113-La-Celia-Cabernet-Sauvignon-Reserva-1.png"
+  },
+  {
+    "slug": "santa-carolina-reserva",
+    "archivo": "img/productos/santa-carolina-reserva.png",
+    "dislicores": "vino-tinto-santa-carolina-reserva-cabernet-sauvignon-102039",
+    "busqueda": "Santa Carolina Reserva Cabernet Sauvignon",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/102039-VINO_TINTO_CABERNET_SAUVIGNON_RESERVA.png"
+  },
+  {
+    "slug": "gato-negro-malbec",
+    "archivo": "img/productos/gato-negro-malbec.png",
+    "dislicores": "vino-tinto-gato-negro-varietal-malbec-100117",
+    "busqueda": "Gato Negro Varietal Malbec",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/100117-VINO-GATO-NEGRO-MALBEC.png"
+  },
+  {
+    "slug": "la-celia-malbec",
+    "archivo": "img/productos/la-celia-malbec.png",
+    "dislicores": "vino-tinto-la-celia-reserva-malbec-109220",
+    "busqueda": "La Celia Reserva Malbec",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/109220-La-Celia-Reserva-Malbec-1.png"
+  },
+  {
+    "slug": "jose-cuervo",
+    "archivo": "img/productos/jose-cuervo.png",
+    "dislicores": "tequila-jose-cuervo-especial-reposado-2-137020",
+    "busqueda": "José Cuervo Especial Reposado",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/137020-TEQUILA-JOSE-CUERVO-ESPECIAL-REPOSADO750.png"
+  },
+  {
+    "slug": "smirnoff",
+    "archivo": "img/productos/smirnoff.png",
+    "dislicores": "vodka-smirnoff-red-label-002025",
+    "busqueda": "Smirnoff Red",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/2025-SMIRNOFF-NO.png"
+  },
+  {
+    "slug": "nectar-sin-azucar",
+    "archivo": "img/productos/nectar-sin-azucar.png",
+    "dislicores": "aguardiente-nectar-trad-s-a-750ml-btl-914001",
+    "busqueda": "Aguardiente Néctar Sin Azúcar",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/17E419827048D4D1A281E4B82EBB9E8B_9a4ebc0e-a219-4cf5-a5a2-9f45c386f9fc_914001-AGUARDIENTE-NECTAR-TRAD-S-A-750ML-BTL.png"
+  },
+  {
+    "slug": "heineken",
+    "archivo": "img/productos/heineken.png",
+    "dislicores": "cerveza-heineken-lata-x6-3-364051",
+    "busqueda": "Heineken",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/364051-CERVEZA-HEINEKEN-LATA-310ML-SIXPACK.png"
+  },
+  {
+    "slug": "andina",
+    "archivo": "img/productos/andina.jpg",
+    "dislicores": null,
+    "busqueda": "Andina Dorada",
+    "urlConocida": "https://exitocol.vteximg.com.br/arquivos/ids/34926699/Cerveza-ANDINA-1860-ml-3558373_a.jpg"
+  },
+  {
+    "slug": "cola-y-pola",
+    "archivo": "img/productos/cola-y-pola.jpg",
+    "dislicores": null,
+    "busqueda": "Cola y Pola",
+    "urlConocida": "https://exitocol.vteximg.com.br/arquivos/ids/36907712/Cola-Y-Pola-Lata-Sixpack-330ml-C-u-449804_a.jpg"
+  },
+  {
+    "slug": "corona",
+    "archivo": "img/productos/corona.png",
+    "dislicores": "cerveza-corona-extra-lata-269ml-x6-370555",
+    "busqueda": "Corona Extra",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/370555-CERVEZA-CORONA-LATA-269ML-SIXPACK.png"
+  },
+  {
+    "slug": "smirnoff-tamarindo",
+    "archivo": "img/productos/smirnoff-tamarindo.png",
+    "dislicores": "vodka-smirnoff-tamarindo-002420",
+    "busqueda": "Smirnoff Tamarindo Picante",
+    "urlConocida": "https://cdn.shopify.com/s/files/1/0975/1878/0781/files/6786C90F6CC1C51CD7320F9B83DBEF8B_f66d7992-bc04-4303-b58f-83225c22979f_botella_smirnoff_frontal-Photoroom.png"
+  }
+]
