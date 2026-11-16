@@ -66,4 +66,4 @@ Las fotos son las imágenes que Dislicores (y Éxito, en dos casos) publica para
 - Para descargarlas: `node scripts/descargar-imagenes.mjs` (o `.\scripts\descargar-imagenes.ps1` en Windows sin Node). Por cada producto consulta la ficha de Dislicores (`/products/<handle>.js`), que siempre trae la foto actual; si ese enlace cambió, busca el producto por nombre (`/search/suggest.json`); y por último usa la URL guardada. Reintenta ante errores y verifica que cada archivo sea una imagen.
 
 ## Notas
-- El grado alcohólico es el habitual del producto en Colombia; verifícalo en la etiqueta si el docente lo pregunta.
+- El grado alcohólico es el habitual del producto en Colombia.
