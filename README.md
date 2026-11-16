@@ -1,15 +1,14 @@
-# La Taberna de Moe — Distribuidora de bebidas (proyecto académico)
+# La Taberna de Moe — Distribuidora de bebidas
 
-Sitio web comercial **responsive** de una distribuidora de bebidas alcohólicas, desarrollado con **HTML5, CSS3, Bootstrap 5 y JavaScript**.
+Sitio web comercial **responsive** de una distribuidora de bebidas alcohólicas ficticia, desarrollado con **HTML5, CSS3, Bootstrap 5 y JavaScript**.
 
-> Proyecto académico. Los **productos, precios y fotos son reales**: se tomaron de Almacenes Éxito el 2 de noviembre de 2026. **No se procesan pagos ni ventas reales.** Venta exclusiva para mayores de 18 años.
+> Proyecto académico. Los **productos, precios y fotos son reales**: fotos de Dislicores y precios de Almacenes Éxito y Dislicores (noviembre de 2026) (ver [`docs/fuentes-precios.md`](docs/fuentes-precios.md)). **No se procesan pagos ni ventas reales.** Venta exclusiva para mayores de 18 años.
 
 **Dirección:** Cra. 3 #22-50, Bogotá · **Correo:** pedidos@tabernamoebogota.com
 **Horario:** lunes a sábado de 8:00 a. m. a 10:00 p. m. · domingos de 11:00 a. m. a 3:00 a. m.
 
 - **Sitio publicado (GitHub Pages):** `https://ImJustice.github.io/taberna-de-moe/`
-- **Repositorio:** `https://ImJustice.com/USUARIO/taberna-de-moe`
-
+- **Repositorio:** `https://github.com/ImJustice/taberna-de-moe`
 ---
 
 ## 1. Descripción
@@ -48,11 +47,12 @@ taberna-de-moe/
 │   └── app.js            # Lógica: edad, catálogo, carrito, formularios
 ├── img/
 │   ├── logo.png, logo.webp, logo-128.png, favicon.png
-│   └── productos/        # Fotos de productos
+│   └── productos/        # Fotos de productos (se descargan con el script) + sin-foto.svg
 ├── capturas/             # Evidencias: celular, tableta, computador y funciones
 ├── scripts/
-│   ├── descargar-imagenes.ps1   # Descarga las fotos
-│   └── descargar-imagenes.sh    # Descarga las fotos
+│   ├── descargar-imagenes.mjs   # Descarga y guarda las fotos
+│   ├── descargar-imagenes.ps1   # Igual, para Windows sin Node.js
+│   └── productos-imagenes.json  # Handle de Dislicores y nombre de cada producto
 ├── docs/
 │   ├── ficha-negocio.md
 │   ├── fuentes-precios.md
@@ -93,7 +93,7 @@ git init
 git add .
 git commit -m "Proyecto La Taberna de Moe - Bootstrap + JS"
 git branch -M main
-git remote add origin https://github.com/USUARIO/taberna-de-moe.git
+git remote add origin https://github.com/ImJustice/taberna-de-moe.git
 git push -u origin main
 ```
 
@@ -112,12 +112,32 @@ Funciones: [verificación de edad](capturas/00-verificacion-edad.png) · [detall
 
 Estilo **minimalista** con la **paleta del logo**: fondo crema `#fdebd0`, negro `#110d09` para texto y botones, y naranja `#ed9715` como color de acento (etiquetas de descuento, cupones y efecto al pasar el mouse por los botones). Una sola tipografía (Inter), bordes finos, filtros tipo *chip* y tarjetas que muestran solo foto, categoría, nombre y precio.
 
-**Fotos de productos:** por defecto se cargan desde el servidor de Éxito. Para tenerlas dentro del repositorio (recomendado para GitHub Pages):
-1. Ejecuta `.\scripts\descargar-imagenes.ps1` (Windows) o `bash scripts/descargar-imagenes.sh` (Mac/Linux) desde la carpeta del proyecto.
-2. En `js/productos.js` cambia `const FOTOS_LOCALES = false;` por `true`.
-3. Haz `git add img/productos` y sube los cambios.
+**Fotos de productos (paso único):** el 8 de noviembre de 2026 se descargaron las 34 fotos: `fotos-taberna-moe.zip` (32 PNG de Dislicores), `andina.jpg` y `cola-y-pola.jpg` (Éxito). Para dejarlas en el proyecto:
 
-Si alguna foto no carga, aparece `img/productos/sin-foto.svg`. **Vuelve a tomar las capturas de `capturas/`** con las fotos ya visibles antes de entregar.
+1. Extrae el contenido de `fotos-taberna-moe.zip` dentro de `img/productos/`, sin subcarpetas: debe quedar `img/productos/old-parr.png`, etc.
+2. Copia `andina.jpg` y `cola-y-pola.jpg` a la misma carpeta.
+3. Sube las fotos: `git add img/productos`, luego `git commit -m "Fotos de productos"` y `git push`.
+
+**Fotos de productos:** se guardan **dentro del proyecto** (`img/productos/`), para que el sitio no dependa de que una tienda siga mostrando sus imágenes. Si una foto falta, el sitio intenta cargarla desde la tienda y, si tampoco está, muestra `img/productos/sin-foto.svg`.
+
+Para descargarlas o actualizarlas, desde la carpeta del proyecto:
+
+```bash
+node scripts/descargar-imagenes.mjs          # Node.js 18+ (Windows, Mac o Linux)
+node scripts/descargar-imagenes.mjs --todas  # vuelve a descargar todas
+```
+
+En Windows sin Node: `.\scripts\descargar-imagenes.ps1` (si Windows lo bloquea, ejecuta antes `Set-ExecutionPolicy -Scope Process Bypass`).
+
+Las fotos se toman de **Dislicores**, que funciona sobre Shopify. Por cada producto, el script consulta su ficha (`dislicores.com/products/<handle>.js`), que siempre trae la foto actual; si ese enlace cambió, busca el producto por nombre; y por último usa la URL guardada. Reintenta ante errores y comprueba que lo descargado sea de verdad una imagen. Al final indica cuáles faltaron; esas se pueden guardar a mano con el mismo nombre (por ejemplo `img/productos/old-parr.jpg`). Andina y Cola y Pola no se venden en Dislicores, por eso su foto viene de Éxito.
+
+Después **sube las fotos al repositorio** para que GitHub Pages las sirva:
+
+```bash
+git add img/productos
+git commit -m "Fotos de productos"
+git push
+```
 
 ## 9. Accesibilidad básica aplicada
 
@@ -130,4 +150,4 @@ Si alguna foto no carga, aparece `img/productos/sin-foto.svg`. **Vuelve a tomar 
 ## 10. Autor
 
 **Julián Camacho** — Tecnología en Desarrollo Informático, Universidad ECCI.
-Fotos de productos: Almacenes Éxito (uso académico). Logo: diseño propio del autor.
+Fotos de productos: Dislicores y Almacenes Éxito (uso académico). Logo: diseño propio del autor.
