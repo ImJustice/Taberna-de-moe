@@ -74,7 +74,7 @@ taberna-de-moe/
 **Probar el carrito:**
 1. Ingresa una fecha de nacimiento de un mayor de edad (con un menor, el sitio queda bloqueado).
 2. Pulsa **Agregar** en cualquier producto o abre su **Detalle** para elegir cantidad.
-3. Abre el carrito (ícono 🛒) y usa **+ / − / 🗑**.
+3. Abre el carrito y usa **+ / − /**.
 4. Prueba los cupones **`MOE10`** (10% de descuento) y **`ENVIOGRATIS`** (envío gratis).
 5. Pulsa **Finalizar pedido**, completa el formulario y confirma.
 
