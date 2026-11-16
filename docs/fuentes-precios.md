@@ -1,9 +1,9 @@
 # Fuentes de precios e imágenes
 
-- **Fotos:** se toman de **Dislicores** (dislicores.com, tienda en Shopify), salvo Andina y Cola y Pola, que Dislicores no vende y vienen de Éxito.
+- **Fotos:** se toman de **Dislicores**, salvo Andina y Cola y Pola, que Dislicores no vende y vienen de Éxito.
 - **Precios:** de **Almacenes Éxito** (consultados el 2 de noviembre de 2026) para los productos originales, y de **Dislicores** (8 de noviembre de 2026) para los que se reemplazaron porque Dislicores no los vende.
 
-Los precios de licores cambian a menudo (ofertas, impuestos, ciudad); conviene revisarlos antes de la sustentación.
+Los precios de licores cambian a menudo (ofertas, impuestos, ciudad).
 
 | # | Producto | Categoría | Precio | Antes | Fuente del precio | Foto |
 |---|---|---|---|---|---|---|
