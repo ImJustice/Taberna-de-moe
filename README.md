@@ -1,8 +1,8 @@
 # La Taberna de Moe — Distribuidora de bebidas (proyecto académico)
 
-Sitio web comercial **responsive** de una distribuidora de bebidas alcohólicas ficticia, desarrollado con **HTML5, CSS3, Bootstrap 5 y JavaScript** para el *Taller Bootstrap + GitHub Pages + JS* (Opción A).
+Sitio web comercial **responsive** de una distribuidora de bebidas alcohólicas, desarrollado con **HTML5, CSS3, Bootstrap 5 y JavaScript**.
 
-> Proyecto académico. Los **productos, precios y fotos son reales**: se tomaron de Almacenes Éxito el 2 de noviembre de 2026 (ver [`docs/fuentes-precios.md`](docs/fuentes-precios.md)). **No se procesan pagos ni ventas reales.** Venta exclusiva para mayores de 18 años.
+> Proyecto académico. Los **productos, precios y fotos son reales**: se tomaron de Almacenes Éxito el 2 de noviembre de 2026. **No se procesan pagos ni ventas reales.** Venta exclusiva para mayores de 18 años.
 
 **Dirección:** Cra. 3 #22-50, Bogotá · **Correo:** pedidos@tabernamoebogota.com
 **Horario:** lunes a sábado de 8:00 a. m. a 10:00 p. m. · domingos de 11:00 a. m. a 3:00 a. m.
@@ -42,19 +42,19 @@ La Taberna de Moe es la cantina del barrio que ahora vende a domicilio. El sitio
 taberna-de-moe/
 ├── index.html            # Página única con 5 secciones
 ├── css/
-│   └── styles.css        # Estilos propios (sobrescriben Bootstrap)
+│   └── styles.css        # Estilos propios
 ├── js/
 │   ├── productos.js      # Datos: categorías y 34 productos reales
 │   └── app.js            # Lógica: edad, catálogo, carrito, formularios
 ├── img/
 │   ├── logo.png, logo.webp, logo-128.png, favicon.png
-│   └── productos/        # Fotos de productos (se descargan con el script) + sin-foto.svg
+│   └── productos/        # Fotos de productos
 ├── capturas/             # Evidencias: celular, tableta, computador y funciones
 ├── scripts/
-│   ├── descargar-imagenes.ps1   # Descarga las fotos (Windows)
-│   └── descargar-imagenes.sh    # Descarga las fotos (Mac/Linux)
+│   ├── descargar-imagenes.ps1   # Descarga las fotos
+│   └── descargar-imagenes.sh    # Descarga las fotos
 ├── docs/
-│   ├── ficha-negocio.md  # Entrega 1
+│   ├── ficha-negocio.md
 │   ├── fuentes-precios.md
 │   └── guia-sustentacion.md
 └── README.md
