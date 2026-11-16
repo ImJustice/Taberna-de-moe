@@ -56,7 +56,6 @@ taberna-de-moe/
 ├── docs/
 │   ├── ficha-negocio.md
 │   ├── fuentes-precios.md
-│   └── guia-sustentacion.md
 └── README.md
 ```
 
